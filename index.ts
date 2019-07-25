@@ -6,7 +6,7 @@ dotenv.config();
 
 const supportedFileExtensions = ['gif','jpeg','jpg','png','docx','gz','log','pdf','pptx','txt','xlsx','zip'];
 
-const issuePage = 'https://github.com/electron/apps/issues/new'
+const issuePage = 'https://github.com/evertdespiegeleer/github-image-upload/issues/new'
 
 let page: puppeteer.Page
 
