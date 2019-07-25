@@ -1,0 +1,20 @@
+{
+  "name": "github-image-upload",
+  "version": "1.0.3",
+  "description": "",
+  "main": "./build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/puppeteer": "^1.12.4",
+    "dotenv": "^8.0.0",
+    "fs": "0.0.1-security",
+    "puppeteer": "^1.19.0"
+  }
+}
