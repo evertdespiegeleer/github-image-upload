@@ -11,6 +11,10 @@
 
 > npm module to, probably without permission, use the github servers as image service
 
+This module is based on a [gist](https://gist.github.com/vinkla/dca76249ba6b73c5dd66a4e986df4c8d) from [@vinkla](https://github.com/vinkla)
+
+Because Github probably doesn't want people to use their services this way, **github-image-upload** [*acts* like a human](https://github.com/GoogleChrome/puppeteer). Humans are slow, so **github-image-upload** is as well, there's no way around that.
+
 ## Install
 
 ```sh
