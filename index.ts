@@ -1,8 +1,6 @@
 import puppeteer from 'puppeteer'
-import dotenv from 'dotenv'
 import path from 'path'
 import fs from 'fs'
-dotenv.config();
 
 const supportedFileExtensions = ['gif','jpeg','jpg','png','docx','gz','log','pdf','pptx','txt','xlsx','zip'];
 

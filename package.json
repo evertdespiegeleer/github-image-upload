@@ -1,6 +1,6 @@
 {
   "name": "github-image-upload",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "./build/index.js",
   "scripts": {
@@ -11,9 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/dotenv": "^6.1.1",
     "@types/puppeteer": "^1.12.4",
-    "dotenv": "^8.0.0",
     "fs": "0.0.1-security",
     "puppeteer": "^1.19.0"
   }
