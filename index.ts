@@ -50,6 +50,16 @@ const uploadFn = (async (username:string, password:string, imgArr: Array<string>
     const browser = await puppeteer.launch();
     page = await browser.newPage();
     await page.goto(issuePage);
+    await page.setRequestInterception(true);
+    page.on('request', (req) => { //No need to be stylish when you're fast
+        if(req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image'){
+            req.abort();
+        }
+        else {
+            req.continue();
+        }
+    })
+ 
     await loginToGithub({
         uname: username,
         pw: password

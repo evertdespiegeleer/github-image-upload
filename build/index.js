@@ -12,11 +12,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const puppeteer_1 = __importDefault(require("puppeteer"));
-const dotenv_1 = __importDefault(require("dotenv"));
 const fs_1 = __importDefault(require("fs"));
-dotenv_1.default.config();
 const supportedFileExtensions = ['gif', 'jpeg', 'jpg', 'png', 'docx', 'gz', 'log', 'pdf', 'pptx', 'txt', 'xlsx', 'zip'];
-const issuePage = 'https://github.com/electron/apps/issues/new';
+const issuePage = 'https://github.com/evertdespiegeleer/github-image-upload/issues/new';
 let page;
 const loginToGithub = (login) => __awaiter(this, void 0, void 0, function* () {
     yield page.type('#login_field', login.uname);
@@ -54,6 +52,15 @@ const uploadFn = ((username, password, imgArr) => __awaiter(this, void 0, void 0
     const browser = yield puppeteer_1.default.launch();
     page = yield browser.newPage();
     yield page.goto(issuePage);
+    yield page.setRequestInterception(true);
+    page.on('request', (req) => {
+        if (req.resourceType() == 'stylesheet' || req.resourceType() == 'font' || req.resourceType() == 'image') {
+            req.abort();
+        }
+        else {
+            req.continue();
+        }
+    });
     yield loginToGithub({
         uname: username,
         pw: password
