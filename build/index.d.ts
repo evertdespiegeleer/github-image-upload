@@ -1,2 +1,3 @@
-declare const uploadFn: (username: string, password: string, imgArr: string[]) => Promise<Object[]>;
-export { uploadFn as upload };
+#!/usr/bin/env node
+import { upload } from './module';
+export { upload };
