@@ -116,7 +116,7 @@ import { upload as ghUpload } from 'github-image-upload'
 })()
 ```
 
-##Notice
+## Notice
 I don't think it's explicitly stated anywhere, but given the fact that this service exists and there's no API, I assume Github doesn't exactly *want* you to use their image-hosting service this way. Many famous repos seem to use it [manually](https://gist.github.com/vinkla/dca76249ba6b73c5dd66a4e986df4c8d) so it doesn't look like Github has any problem with you using it, but if they would've *wanted* you to be able to use it automatically, I assume they would've written an API. 
 
 **github-image-upload** automates the manual process, but it doesn't use an API, it rather [acts like it is a human being](https://github.com/GoogleChrome/puppeteer). Github, in other words, has no way of knowing whether your computer uploads images automatically, or whether you do it manually. This technique is called web scraping. Although it's used very extensively, there has been quite a bit of [legal debate](https://en.wikipedia.org/wiki/Web_scraping#Legal_issues) about it. Sooo, just to be safe: I'm not _advising_ you to use this package.
