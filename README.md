@@ -82,7 +82,7 @@ When new, local images are found, this command takes ~ 3.5s, plus the upload tim
 ...
 ```
 
-In this example, when running ```npm run build``` or ```npm run ghimage```, **github-image-upload** will do its thing. When using the package this way, as an npm script, a global installation is not needed. The prefered way to install would then be a a dev-dependency:
+In this example, when running ```npm run build``` or ```npm run ghimage```, **github-image-upload** will do its thing. When using the package this way, as an npm script, a global installation is not needed. The prefered way to install would then be as a dev-dependency:
 
 ```sh
 npm i github-image-upload --save-dev
@@ -90,7 +90,7 @@ npm i github-image-upload --save-dev
 
 ### Command line interactive
 
-Outside or project folders, the tool can also be used interactively:
+Outside of project folders, the tool can also be used interactively:
 
 ```
 github-image-upload -i
@@ -116,30 +116,30 @@ import { upload as ghUpload } from 'github-image-upload'
 })()
 ```
 
-## Notice
+# Notice
 I don't think it's explicitly stated anywhere, but given the fact that this service exists and there's no API, I assume Github doesn't exactly *want* you to use their image-hosting service this way. Many famous repos seem to use it [manually](https://gist.github.com/vinkla/dca76249ba6b73c5dd66a4e986df4c8d) so it doesn't look like Github has any problem with you using it, but if they would've *wanted* you to be able to use it automatically, I assume they would've written an API. 
 
 **github-image-upload** automates the manual process, but it doesn't use an API, it rather [acts like it is a human being](https://github.com/GoogleChrome/puppeteer). Github, in other words, has no way of knowing whether your computer uploads images automatically, or whether you do it manually. This technique is called web scraping. Although it's used very extensively, there has been quite a bit of [legal debate](https://en.wikipedia.org/wiki/Web_scraping#Legal_issues) about it. Sooo, just to be safe: I'm not _advising_ you to use this package.
 
-## Author
+# Author
 
 👤 **Evert De Spiegeleer**
 
 * Twitter: [@eds1999](https://twitter.com/eds1999)
 * Github: [@evertdespiegeleer](https://github.com/evertdespiegeleer)
 
-## 🤝 Contributing
+# 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/evertdespiegeleer/github-image-upload/issues).
 
-## Show your support
+# Show your support
 
 Give a ⭐️ if this project helped you!
 
-## 📝 License
+# 📝 License
 
 Copyright © 2019 [Evert De Spiegeleer](https://github.com/evertdespiegeleer).<br />
 This project is [GNU](https://www.gnu.org/licenses/gpl-3.0.nl.html) licensed.
 
-### :coffee: Coffee!
+# :coffee: Coffee!
 [<img src="https://user-images.githubusercontent.com/1685680/61808727-4925de00-ae3c-11e9-9d60-66bef358fd8e.png" alt="drawing" width="180"/>](https://www.buymeacoffee.com/evertds "Buy me a coffee")
