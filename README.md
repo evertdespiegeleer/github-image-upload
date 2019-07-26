@@ -9,13 +9,14 @@
   </a>
 </p>
 
-> npm module to, probably without permission, use the github servers as an image cdn, hosting the images for the README file, and thus keeping gits as small as possible
+> npm module to use the github servers as an image cdn, hosting the images for the README file, and thus keeping gits as small as possible
 
-This module is based on a [gist](https://gist.github.com/vinkla/dca76249ba6b73c5dd66a4e986df4c8d) from [@vinkla](https://github.com/vinkla)
+# About
+A nice README is important. If you're reading this, you probably know that. Markdown, the markup language of the README-file isn't exactly *that* flexible however. Some html is supported, but it's pretty restrictive. The usual way to make your README-file stand out is by the use of pictures. For some stores, it's even necessary to have high-res screenshots in your README. However, dropping high-res images into your git will make your awesome codebase seem really big, heavy and unorganised. Hosting your images on third-party sites is an option, but it isn't exactly easy, and it's by no means reliable. github-image-upload enables you to very easily use the Github servers themselves to host the images for your README, without even having to leave your IDE.
 
-Because Github probably doesn't want people to use their services this way, **github-image-upload** [*acts* like a human](https://github.com/GoogleChrome/puppeteer). Humans are slow, so **github-image-upload** is as well, there's no way around that. The async ```upload``` function takes on average 3500ms to return.
+This package is based on a [gist](https://gist.github.com/vinkla/dca76249ba6b73c5dd66a4e986df4c8d) from [@vinkla](https://github.com/vinkla)
 
-## Install
+# Install
 
 locally, usually for use as a module:
 ```sh
@@ -26,9 +27,10 @@ globally, usually for use as a command line application:
 ```sh
 npm i github-image-upload -g
 ```
-## Usage
+# Usage
 
-### Command line
+### Command line for projects
+
 **github-image-upload** is primarily designed to be used as a command line application.
 
 To do so, the package has to be **installed globally**.
@@ -54,13 +56,13 @@ For most projects, the default ```'../README.md'``` should be correct.
 
 The entire ```.ghimages```-folder is automatically added to ```.gitignore```. This keeps your Github-credentials safe from accidentally being pushed to Github. When publishing your code on other platforms however, handle ```.ghimages``` with care. It should never be published.
 
-When adding images to your README.md, put the image files in the .ghimages folder. Include them into the README.md like you normally would, eg.:
+When adding images to your README.md, put the image files in the .ghimages folder. Include them into the README.md locally like you normally would, eg.:
 
 ```markdown
 ![a nice image](./.ghimages/aReallyNiceImage.png)
 ```
 
-To convert upload these images to Github and replace the local refernces in your README.md with references to the public Github-url's, use the following command:
+To convert upload these images to Github and replace the local references in your README.md with references to the public Github-url's, use the following command:
 
 ```sh
 github-image-upload -c
@@ -86,6 +88,14 @@ In this example, when running ```npm run build``` or ```npm run ghimage```, **gi
 npm i github-image-upload --save-dev
 ```
 
+### Command line interactive
+
+Outside or project folders, the tool can also be used interactively:
+
+```
+github-image-upload -i
+```
+
 ### As a module
 
 ```js
@@ -105,6 +115,11 @@ import { upload as ghUpload } from 'github-image-upload'
     */
 })()
 ```
+
+##Notice
+I don't think it's explicitly stated anywhere, but given the fact that this service exists and there's no API, I assume Github doesn't exactly *want* you to use their image-hosting service this way. Many famous repos seem to use it [manually](https://gist.github.com/vinkla/dca76249ba6b73c5dd66a4e986df4c8d) so it doesn't look like Github has any problem with you using it, but if they would've *wanted* you to be able to use it automatically, I assume they would've written an API. 
+
+**github-image-upload** automates the manual process, but it doesn't use an API, it rather [acts like it is a human being](https://github.com/GoogleChrome/puppeteer). Github, in other words, has no way of knowing whether your computer uploads images automatically, or whether you do it manually. This technique is called web scraping. Although it's used very extensively, there has been quite a bit of [legal debate](https://en.wikipedia.org/wiki/Web_scraping#Legal_issues) about it. Sooo, just to be safe: I'm not _advising_ you to use this package.
 
 ## Author
 
@@ -126,5 +141,5 @@ Give a ⭐️ if this project helped you!
 Copyright © 2019 [Evert De Spiegeleer](https://github.com/evertdespiegeleer).<br />
 This project is [GNU](https://www.gnu.org/licenses/gpl-3.0.nl.html) licensed.
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+### :coffee: Coffee!
+[<img src="https://user-images.githubusercontent.com/1685680/61808727-4925de00-ae3c-11e9-9d60-66bef358fd8e.png" alt="drawing" width="180"/>](https://www.buymeacoffee.com/evertds "Buy me a coffee")

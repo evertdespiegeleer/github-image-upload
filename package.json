@@ -1,7 +1,7 @@
 {
   "name": "github-image-upload",
-  "version": "1.0.10",
-  "description": "npm module to, probably without permission, use the github servers as image cdn",
+  "version": "1.0.11",
+  "description": "npm module to use the github servers as an image cdn, hosting the images for the README file, and thus keeping gits as small as possible",
   "main": "./build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
