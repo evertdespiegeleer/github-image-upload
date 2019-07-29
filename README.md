@@ -11,6 +11,8 @@
 
 > npm module to use the github servers as an image cdn, hosting the images for the README file, and thus keeping gits as small as possible
 
+<img src="https://user-images.githubusercontent.com/1685680/61972941-1833dd80-afe3-11e9-991f-38d0d505d88a.gif" width="9000"/>
+
 # About
 A nice README is important. If you're reading this, you probably know that. Markdown, the markup language of the README-file isn't exactly *that* flexible however. Some html is supported, but it's pretty restrictive. The usual way to make your README-file stand out is by the use of pictures. For some stores, it's even necessary to have high-res screenshots in your README. However, dropping high-res images into your git will make your awesome codebase seem really big, heavy and unorganised. Hosting your images on third-party sites is an option, but it isn't exactly easy, and it's by no means reliable. github-image-upload enables you to very easily use the Github servers themselves to host the images for your README, without even having to leave your IDE.
 
